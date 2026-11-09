@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Исполнителям — дело</title>
+  <meta name="description" content="Получайте заказы с подтверждённым бюджетом. Комиссия 18% только после закрытия заказа, без платных откликов.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="contractor">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="дело — на главную"><img src="assets/logo.svg" alt=""><span>дело</span></a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="catalog.html" data-nav="catalog">Услуги</a>
+        <a href="index.html#how">Как это работает</a>
+        <a href="contractor.html" data-nav="contractor">Исполнителям</a>
+        <a href="index.html#guarantee">Гарантия</a>
+      </nav>
+      <div class="header-actions">
+        <a class="login" href="dashboard.html">Войти</a>
+        <a class="btn btn-primary btn-sm" href="brief.html">Заказать</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Меню" aria-expanded="false" data-icon="menu"></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация">
+      <a href="catalog.html">Услуги</a>
+      <a href="index.html#how">Как это работает</a>
+      <a href="contractor.html">Исполнителям</a>
+      <a href="index.html#guarantee">Гарантия</a>
+      <a href="dashboard.html">Личный кабинет</a>
+      <a class="btn btn-primary btn-block" href="brief.html">Заказать услугу</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <section class="contractor-hero">
+        <div>
+          <div class="eyebrow">Исполнителям</div>
+          <h1>Заказы с понятным брифом и подтверждённым бюджетом</h1>
+          <p class="lead">Мы не продаём вам «отклики» и не устраиваем тендеры. Клиент приходит с задачей, вы получаете заказ, а комиссию платите только после закрытия сделки.</p>
+          <ul class="check-list">
+            <li><span class="check" data-icon="check"></span><span>Комиссия 18% только с закрытого заказа</span></li>
+            <li><span class="check" data-icon="check"></span><span>Никаких платных откликов и подписок на старте</span></li>
+            <li><span class="check" data-icon="check"></span><span>Оплата в escrow: деньги уже зарезервированы</span></li>
+            <li><span class="check" data-icon="check"></span><span>Выплата в течение 3 рабочих дней после приёмки</span></li>
+            <li><span class="check" data-icon="check"></span><span>Понятные правила споров и защита от необоснованных возвратов</span></li>
+          </ul>
+        </div>
+        <div class="apply-card" id="contractorCard">
+          <h2>Стать исполнителем</h2>
+          <p>Заявка занимает 2 минуты. Дальше — проверка портфолио и тестовое задание.</p>
+          <form id="contractorForm" novalidate style="margin-top:15px">
+            <div class="form-grid">
+              <div class="field"><label for="cName">Имя</label><input id="cName" name="name" autocomplete="name" placeholder="Анна"></div>
+              <div class="field"><label for="cSpec">Специализация</label>
+                <select id="cSpec" name="spec">
+                  <option value="">Выберите</option>
+                  <option>Сайты и разработка</option>
+                  <option>Дизайн и бренд</option>
+                  <option>Тексты и контент</option>
+                  <option>SEO и аналитика</option>
+                  <option>Реклама и трафик</option>
+                  <option>Автоматизация</option>
+                </select>
+              </div>
+              <div class="field full"><label for="cEmail">Email</label><input id="cEmail" name="email" type="email" autocomplete="email" placeholder="you@studio.ru"></div>
+              <div class="field full"><label for="cPortfolio">Портфолио</label><input id="cPortfolio" name="portfolio" placeholder="Ссылка на кейсы или Behance / GitHub"></div>
+              <div class="field full"><label for="cExperience">Опыт</label>
+                <select id="cExperience" name="experience">
+                  <option>1–3 года</option>
+                  <option>3–5 лет</option>
+                  <option>5+ лет</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-error" id="contractorError"></div>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" style="margin-top:14px">Отправить заявку <span data-icon="send"></span></button>
+            <div class="consent" style="margin-top:10px"><span>Это демо. Данные сохраняются только в вашем браузере и никуда не отправляются.</span></div>
+          </form>
+        </div>
+      </section>
+
+      <section class="section-tight">
+        <div class="section-head">
+          <div class="eyebrow">Почему дело</div>
+          <h2>Меньше продаж — больше работы</h2>
+          <p>Мы берём на себя бриф, первичный отбор и приёмку. Вы занимаетесь тем, что умеете.</p>
+        </div>
+        <div class="benefit-grid">
+          <div class="benefit"><div class="icon-wrap" data-icon="wallet"></div><h3>Предсказуемая оплата</h3><p>Бюджет зарезервирован до старта. Не нужно напоминать клиенту про счёт.</p></div>
+          <div class="benefit"><div class="icon-wrap" data-icon="file"></div><h3>Понятное ТЗ</h3><p>Бриф, состав работ и критерии приёмки зафиксированы до начала.</p></div>
+          <div class="benefit"><div class="icon-wrap" data-icon="shield"></div><h3>Защита от споров</h3><p>Переписка и файлы хранятся в заказе. Решение — по правилам, а не по настроению.</p></div>
+          <div class="benefit"><div class="icon-wrap" data-icon="chart"></div><h3>Рост репутации</h3><p>Отзывы только от реальных заказов. Рейтинг нельзя накрутить.</p></div>
+          <div class="benefit"><div class="icon-wrap" data-icon="chat"></div><h3>Без тендеров</h3><p>Клиент выбирает из 3–5 исполнителей, а не из 50 откликов.</p></div>
+          <div class="benefit"><div class="icon-wrap" data-icon="clock"></div><h3>Свободный график</h3><p>Берите заказы, которые подходят по срокам и компетенциям.</p></div>
+        </div>
+      </section>
+
+      <section class="section-tight" style="padding-bottom:70px">
+        <div class="section-head center">
+          <div class="eyebrow">Отбор</div>
+          <h2>Кого мы берём</h2>
+          <p>Не всех. Нам важно, чтобы клиент возвращался, а не «попробовал и разочаровался».</p>
+        </div>
+        <div class="how-grid">
+          <div class="step" data-step="01"><div class="step-num">1</div><h3>Опыт 3+ года</h3><p>И 3–5 релевантных кейсов в выбранной категории.</p></div>
+          <div class="step" data-step="02"><div class="step-num">2</div><h3>Тестовое задание</h3><p>Реальная задача с дедлайном и критериями. Без бесплатных «концепций на 10 страниц».</p></div>
+          <div class="step" data-step="03"><div class="step-num">3</div><h3>Верификация</h3><p>Личность, налоговый статус, реквизиты. Это защищает и вас, и клиента.</p></div>
+          <div class="step" data-step="04"><div class="step-num">4</div><h3>Первый заказ</h3><p>Сопровождаем и проверяем результат. Дальше — самостоятельная работа.</p></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>дело</span></a>
+          <p>Маркетплейс бизнес-услуг с гарантией результата. Демо-проект: показывает продуктовую модель, а не реальные платежи.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <a href="catalog.html?cat=web">Сайты</a>
+          <a href="catalog.html?cat=design">Дизайн</a>
+          <a href="catalog.html?cat=text">Тексты</a>
+          <a href="catalog.html?cat=seo">SEO</a>
+        </div>
+        <div class="footer-col">
+          <h4>Платформа</h4>
+          <a href="brief.html">Оставить заявку</a>
+          <a href="dashboard.html">Личный кабинет</a>
+          <a href="contractor.html">Исполнителям</a>
+          <a href="index.html#guarantee">Гарантия</a>
+        </div>
+        <div class="footer-col">
+          <h4>Документы</h4>
+          <a href="legal.html">Оферта и правила</a>
+          <a href="legal.html#privacy">Персональные данные</a>
+          <a href="legal.html#disputes">Споры</a>
+          <a href="legal.html#contacts">Контакты</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 «Дело». Демонстрационный проект.</span>
+        <span>Не является реальной платформой. Оплата имитируется.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

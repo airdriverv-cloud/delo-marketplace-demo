@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard.html
+
+Sitemap: https://airdriverv-cloud.github.io/delo-marketplace-demo/sitemap.xml

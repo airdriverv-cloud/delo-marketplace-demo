@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Услуги для бизнеса — дело</title>
+  <meta name="description" content="Каталог проверенных услуг: сайты, дизайн, тексты, SEO, реклама и автоматизация. Фиксированные пакеты и escrow.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="catalog">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="дело — на главную"><img src="assets/logo.svg" alt=""><span>дело</span></a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="catalog.html" data-nav="catalog">Услуги</a>
+        <a href="index.html#how">Как это работает</a>
+        <a href="contractor.html" data-nav="contractor">Исполнителям</a>
+        <a href="index.html#guarantee">Гарантия</a>
+      </nav>
+      <div class="header-actions">
+        <a class="login" href="dashboard.html">Войти</a>
+        <a class="btn btn-primary btn-sm" href="brief.html">Заказать</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Меню" aria-expanded="false" data-icon="menu"></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация">
+      <a href="catalog.html">Услуги</a>
+      <a href="index.html#how">Как это работает</a>
+      <a href="contractor.html">Исполнителям</a>
+      <a href="index.html#guarantee">Гарантия</a>
+      <a href="dashboard.html">Личный кабинет</a>
+      <a class="btn btn-primary btn-block" href="brief.html">Заказать услугу</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a><span data-icon="chevron"></span><span>Услуги</span>
+        </nav>
+        <h1>Услуги для бизнеса</h1>
+        <p>Проверенные исполнители и фиксированные пакеты. Выберите готовую услугу или опишите задачу — подберём 3–5 специалистов.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="chip-row" id="catalogChips"></div>
+        <div class="catalog-layout">
+          <aside class="filters" id="filtersPanel" aria-label="Фильтры">
+            <div class="filters-head">
+              <h2>Фильтры</h2>
+              <button class="btn btn-ghost btn-sm" type="button" id="resetFilters">Сбросить</button>
+            </div>
+            <div class="filter-group">
+              <label class="field" for="catalogQuery">
+                <span style="font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:800">Поиск</span>
+                <input id="catalogQuery" type="search" placeholder="Например, лендинг">
+              </label>
+            </div>
+            <div class="filter-group">
+              <h3>Категория</h3>
+              <div id="filterCategories"></div>
+            </div>
+            <div class="filter-group">
+              <h3>Цена, ₽</h3>
+              <div class="range-row">
+                <input id="maxPrice" type="number" min="0" step="5000" placeholder="До, например 100000" aria-label="Максимальная цена">
+              </div>
+            </div>
+            <div class="filter-group">
+              <h3>Рейтинг</h3>
+              <select id="minRating" class="field" style="border:1px solid var(--line);border-radius:9px;padding:9px;font-size:.82rem;background:#fff;width:100%">
+                <option value="0">Любой</option>
+                <option value="4.5">4,5 и выше</option>
+                <option value="4.8">4,8 и выше</option>
+                <option value="5">Только 5,0</option>
+              </select>
+            </div>
+            <a class="btn btn-light btn-block btn-sm" href="brief.html">Не нашли? Оставить бриф</a>
+          </aside>
+
+          <div>
+            <div class="results-bar">
+              <div class="count" id="resultCount">Загрузка…</div>
+              <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+                <button class="btn btn-light btn-sm filter-toggle" type="button" id="filterToggle"><span data-icon="filter"></span> Фильтры</button>
+                <div class="sort">
+                  <label class="sr-only" for="sortSelect">Сортировка</label>
+                  <select id="sortSelect">
+                    <option value="popular">Сначала популярные</option>
+                    <option value="rating">По рейтингу</option>
+                    <option value="price-asc">Сначала дешевле</option>
+                    <option value="price-desc">Сначала дороже</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-grid" id="catalogGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>дело</span></a>
+          <p>Маркетплейс бизнес-услуг с гарантией результата. Демо-проект: показывает продуктовую модель, а не реальные платежи.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <a href="catalog.html?cat=web">Сайты</a>
+          <a href="catalog.html?cat=design">Дизайн</a>
+          <a href="catalog.html?cat=text">Тексты</a>
+          <a href="catalog.html?cat=seo">SEO</a>
+        </div>
+        <div class="footer-col">
+          <h4>Платформа</h4>
+          <a href="brief.html">Оставить заявку</a>
+          <a href="dashboard.html">Личный кабинет</a>
+          <a href="contractor.html">Исполнителям</a>
+          <a href="index.html#guarantee">Гарантия</a>
+        </div>
+        <div class="footer-col">
+          <h4>Документы</h4>
+          <a href="legal.html">Оферта и правила</a>
+          <a href="legal.html#privacy">Персональные данные</a>
+          <a href="legal.html#disputes">Споры</a>
+          <a href="legal.html#contacts">Контакты</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 «Дело». Демонстрационный проект.</span>
+        <span>Не является реальной платформой. Оплата имитируется.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

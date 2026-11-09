@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label=" Скорость и адаптив">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0f4f8"/>
+      <stop offset="1" stop-color="#d5e0ec"/>
+    </linearGradient>
+    <linearGradient id="s" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f6fed"/>
+      <stop offset="1" stop-color="#0b3b8c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <circle cx="650" cy="100" r="170" fill="#fff" opacity=".55"/>
+  <rect x="250" y="85" width="180" height="330" rx="30" fill="#14284b"/>
+  <rect x="268" y="112" width="144" height="260" rx="14" fill="#fff"/>
+  <rect x="286" y="132" width="70" height="14" rx="7" fill="#2f6fed"/>
+  <rect x="286" y="158" width="108" height="10" rx="5" fill="#d5e0ec"/>
+  <rect x="286" y="178" width="90" height="10" rx="5" fill="#d5e0ec"/>
+  <rect x="286" y="208" width="108" height="64" rx="12" fill="#eaf2ff"/>
+  <rect x="286" y="288" width="108" height="10" rx="5" fill="#d5e0ec"/>
+  <rect x="286" y="308" width="72" height="10" rx="5" fill="#d5e0ec"/>
+  <rect x="470" y="135" width="220" height="220" rx="24" fill="#fff"/>
+  <path d="M515 285a70 70 0 0 1 130 0" stroke="#d5e0ec" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M515 285a70 70 0 0 1 95-66" stroke="url(#s)" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M580 285l38-44" stroke="#ff7a45" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="580" cy="285" r="12" fill="#14284b"/>
+  <rect x="500" y="330" width="160" height="12" rx="6" fill="#d5e0ec"/>
+  <rect x="500" y="352" width="100" height="12" rx="6" fill="#d5e0ec"/>
+</svg>

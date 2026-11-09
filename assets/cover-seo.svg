@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="SEO и аналитика">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3f0ff"/>
+      <stop offset="1" stop-color="#dcd2ff"/>
+    </linearGradient>
+    <linearGradient id="p" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7a5af8"/>
+      <stop offset="1" stop-color="#4423b8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <circle cx="130" cy="420" r="190" fill="#fff" opacity=".4"/>
+  <rect x="170" y="110" width="460" height="290" rx="26" fill="#fff" opacity=".95"/>
+  <rect x="205" y="145" width="120" height="16" rx="8" fill="#14284b"/>
+  <rect x="205" y="190" width="80" height="150" rx="12" fill="#e7e1ff"/>
+  <rect x="305" y="230" width="80" height="110" rx="12" fill="#c9baff"/>
+  <rect x="405" y="205" width="80" height="135" rx="12" fill="#a68cff"/>
+  <rect x="505" y="165" width="80" height="175" rx="12" fill="url(#p)"/>
+  <path d="M205 360h380" stroke="#d9d2f5" stroke-width="3"/>
+  <circle cx="600" cy="120" r="46" fill="#ff7a45"/>
+  <path d="M585 120l10 10 20-22" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

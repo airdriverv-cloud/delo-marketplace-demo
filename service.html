@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Услуга — дело</title>
+  <meta name="description" content="Карточка услуги: тарифы, сроки, отзывы и оплата в escrow.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="service">
+  <a class="skip-link" href="#serviceRoot">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="дело — на главную"><img src="assets/logo.svg" alt=""><span>дело</span></a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="catalog.html" data-nav="catalog">Услуги</a>
+        <a href="index.html#how">Как это работает</a>
+        <a href="contractor.html" data-nav="contractor">Исполнителям</a>
+        <a href="index.html#guarantee">Гарантия</a>
+      </nav>
+      <div class="header-actions">
+        <a class="login" href="dashboard.html">Войти</a>
+        <a class="btn btn-primary btn-sm" href="brief.html">Заказать</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Меню" aria-expanded="false" data-icon="menu"></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация">
+      <a href="catalog.html">Услуги</a>
+      <a href="index.html#how">Как это работает</a>
+      <a href="contractor.html">Исполнителям</a>
+      <a href="index.html#guarantee">Гарантия</a>
+      <a href="dashboard.html">Личный кабинет</a>
+      <a class="btn btn-primary btn-block" href="brief.html">Заказать услугу</a>
+    </nav>
+  </header>
+
+  <main id="serviceRoot" class="service-page">
+    <div class="container" style="padding-top:26px">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="index.html">Главная</a><span data-icon="chevron"></span>
+        <a href="catalog.html">Услуги</a><span data-icon="chevron"></span>
+        <span id="breadcrumbTitle">Услуга</span>
+      </nav>
+
+      <div class="service-hero-card">
+        <div class="service-hero-copy">
+          <div class="service-cat" id="serviceCat"></div>
+          <h1 id="serviceTitle"></h1>
+          <p class="tagline" id="serviceTagline"></p>
+          <div class="service-hero-meta">
+            <span id="serviceRating" class="rating"></span>
+            <span class="meta-item"><span data-icon="clock"></span><span id="serviceTerm"></span></span>
+            <span class="meta-item"><span data-icon="briefcase"></span><span id="serviceProjects"></span></span>
+            <span class="meta-item"><span data-icon="chat"></span><span id="serviceResponse"></span></span>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+            <span class="badge green"><span data-icon="shield"></span> Escrow</span>
+            <span class="badge"><span data-icon="verified"></span> Проверенный исполнитель</span>
+            <span class="badge dark"><span data-icon="file"></span> Договор и закрывающие</span>
+          </div>
+        </div>
+        <div class="service-hero-img"><img id="serviceCover" src="assets/cover-web.svg" alt=""></div>
+      </div>
+
+      <div class="service-layout">
+        <div class="service-main">
+          <div class="panel">
+            <div class="tabs" role="tablist" aria-label="Информация об услуге">
+              <button class="tab active" type="button" role="tab" aria-selected="true" data-tab="tabDescription">Описание</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="tabIncludes">Что входит</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="tabReviews">Отзывы</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="tabFaq">FAQ</button>
+            </div>
+            <div class="tab-panel active" id="tabDescription">
+              <h2>Что вы получите</h2>
+              <p id="serviceDescription"></p>
+              <div class="contractor-card" id="contractorCard"></div>
+            </div>
+            <div class="tab-panel" id="tabIncludes">
+              <h2>Состав работ</h2>
+              <p>Каждый пункт фиксируется в заказе. Если чего-то не хватает — добавьте допуслугу справа.</p>
+              <ul class="include-grid" id="serviceIncludes"></ul>
+            </div>
+            <div class="tab-panel" id="tabReviews">
+              <h2>Отзывы клиентов</h2>
+              <div id="reviewsList"></div>
+            </div>
+            <div class="tab-panel" id="tabFaq">
+              <h2>Частые вопросы</h2>
+              <div class="faq" id="faqList"></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h2>Как проходит заказ</h2>
+            <div class="how-grid" style="margin-top:16px;grid-template-columns:1fr 1fr">
+              <div class="step" data-step="01"><div class="step-num">1</div><h3>Оплата в escrow</h3><p>Деньги удерживаются платформой. Исполнитель видит подтверждённый бюджет.</p></div>
+              <div class="step" data-step="02"><div class="step-num">2</div><h3>Работа по брифу</h3><p>Старт после согласования. Правки — в рамках тарифа, статусы и файлы в чате.</p></div>
+              <div class="step" data-step="03"><div class="step-num">3</div><h3>Приёмка по чек-листу</h3><p>Проверяете результат. Всё в порядке — оплата уходит исполнителю.</p></div>
+              <div class="step" data-step="04"><div class="step-num">4</div><h3>Спор, если нужно</h3><p>Открываете спор до приёмки. Платформа изучает материалы и выносит решение.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="side-sticky">
+          <div class="order-card">
+            <h3>Выберите тариф</h3>
+            <div class="package-list" id="packageList"></div>
+            <div class="extras">
+              <h4>Допуслуги</h4>
+              <div id="extrasList"></div>
+            </div>
+            <div class="total-row"><span>Итого <small id="orderDays" style="display:block;font-size:.7rem"></small></span><strong id="orderTotal">—</strong></div>
+            <button class="btn btn-primary btn-lg btn-block" type="button" id="orderButton" style="margin-top:12px">Оформить заказ</button>
+            <div class="order-note"><span data-icon="shield"></span><span>Оплата удерживается до приёмки. Возврат — по правилам платформы.</span></div>
+            <div class="secure-row"><span><span data-icon="card"></span> Карта / СБП</span><span><span data-icon="lock"></span> Безопасно</span></div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="section-tight" style="padding-top:34px">
+        <div class="section-head-row">
+          <div class="section-head"><div class="eyebrow">Похожие</div><h2>Ещё услуги для этой задачи</h2></div>
+          <a class="link-arrow" href="catalog.html">Все услуги <span data-icon="arrow"></span></a>
+        </div>
+        <div class="service-grid" id="relatedGrid"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>дело</span></a>
+          <p>Маркетплейс бизнес-услуг с гарантией результата. Демо-проект: показывает продуктовую модель, а не реальные платежи.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <a href="catalog.html?cat=web">Сайты</a>
+          <a href="catalog.html?cat=design">Дизайн</a>
+          <a href="catalog.html?cat=text">Тексты</a>
+          <a href="catalog.html?cat=seo">SEO</a>
+        </div>
+        <div class="footer-col">
+          <h4>Платформа</h4>
+          <a href="brief.html">Оставить заявку</a>
+          <a href="dashboard.html">Личный кабинет</a>
+          <a href="contractor.html">Исполнителям</a>
+          <a href="index.html#guarantee">Гарантия</a>
+        </div>
+        <div class="footer-col">
+          <h4>Документы</h4>
+          <a href="legal.html">Оферта и правила</a>
+          <a href="legal.html#privacy">Персональные данные</a>
+          <a href="legal.html#disputes">Споры</a>
+          <a href="legal.html#contacts">Контакты</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 «Дело». Демонстрационный проект.</span>
+        <span>Не является реальной платформой. Оплата имитируется.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

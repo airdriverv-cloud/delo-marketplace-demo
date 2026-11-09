@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Бриф на услугу — дело</title>
+  <meta name="description" content="Опишите задачу за 5 минут: AI соберёт структуру, а мы предложим 3–5 проверенных исполнителей.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="brief">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="дело — на главную"><img src="assets/logo.svg" alt=""><span>дело</span></a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="catalog.html" data-nav="catalog">Услуги</a>
+        <a href="index.html#how">Как это работает</a>
+        <a href="contractor.html" data-nav="contractor">Исполнителям</a>
+        <a href="index.html#guarantee">Гарантия</a>
+      </nav>
+      <div class="header-actions">
+        <a class="login" href="dashboard.html">Войти</a>
+        <a class="btn btn-primary btn-sm" href="brief.html">Заказать</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Меню" aria-expanded="false" data-icon="menu"></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация">
+      <a href="catalog.html">Услуги</a>
+      <a href="index.html#how">Как это работает</a>
+      <a href="contractor.html">Исполнителям</a>
+      <a href="index.html#guarantee">Гарантия</a>
+      <a href="dashboard.html">Личный кабинет</a>
+      <a class="btn btn-primary btn-block" href="brief.html">Заказать услугу</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a><span data-icon="chevron"></span><span>Бриф</span>
+        </nav>
+        <h1>Расскажите о задаче</h1>
+        <p>5 минут — и мы поймём, кто вам нужен. Не нужно готовое ТЗ: AI поможет собрать структуру, а менеджер проверит её перед подбором.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container brief-layout">
+        <div class="wizard" id="briefCard">
+          <form id="briefForm" novalidate>
+            <div class="wizard-top"><span id="wizardStepLabel">Шаг 1 из 5</span></div>
+            <div class="progress-track"><span id="progressBar"></span></div>
+
+            <div class="step-panel active" data-step="1">
+              <h2>Что нужно сделать?</h2>
+              <p>Выберите основную задачу. Детали уточним на следующем шаге.</p>
+              <div class="choice-grid">
+                <label class="choice-card selected"><input type="radio" name="task" value="site" checked><span class="choice-icon" data-icon="code"></span><div><strong>Сайт или лендинг</strong><span>Запуск, редизайн, магазин</span></div></label>
+                <label class="choice-card"><input type="radio" name="task" value="design"><span class="choice-icon" data-icon="palette"></span><div><strong>Дизайн и бренд</strong><span>Логотип, айдентика, UI</span></div></label>
+                <label class="choice-card"><input type="radio" name="task" value="text"><span class="choice-icon" data-icon="text"></span><div><strong>Тексты и контент</strong><span>Сайт, статьи, рассылки</span></div></label>
+                <label class="choice-card"><input type="radio" name="task" value="ads"><span class="choice-icon" data-icon="bolt"></span><div><strong>Реклама и трафик</strong><span>Директ, аналитика, заявки</span></div></label>
+                <label class="choice-card"><input type="radio" name="task" value="auto"><span class="choice-icon" data-icon="layers"></span><div><strong>Автоматизация</strong><span>CRM, интеграции, процессы</span></div></label>
+                <label class="choice-card"><input type="radio" name="task" value="other"><span class="choice-icon" data-icon="spark"></span><div><strong>Другое</strong><span>Опишите задачу словами</span></div></label>
+              </div>
+            </div>
+
+            <div class="step-panel" data-step="2">
+              <h2>Расскажите о проекте</h2>
+              <p>Чем больше контекста, тем точнее подбор. 2–3 предложения уже достаточно.</p>
+              <div class="form-grid" style="margin-top:16px">
+                <div class="field full"><label for="description">Задача и контекст</label><textarea id="description" name="description" placeholder="Например: нужен лендинг для студии йоги в Москве. Есть логотип и фото, текстов нет. Цель — заявки на пробное занятие."></textarea><span class="hint">Минимум 20 символов</span></div>
+                <div class="field"><label for="audience">Целевая аудитория</label><input id="audience" name="audience" placeholder="Кто ваш клиент?"></div>
+                <div class="field"><label for="references">Референсы</label><input id="references" name="references" placeholder="Ссылки или описание"></div>
+              </div>
+            </div>
+
+            <div class="step-panel" data-step="3">
+              <h2>Бюджет и срок</h2>
+              <p>Это помогает не тратить время на предложения, которые не подходят.</p>
+              <div class="choice-grid" style="margin-top:16px">
+                <label class="choice-card"><input type="radio" name="budget" value="30"><div><strong>До 30 тыс. ₽</strong><span>Небольшая задача</span></div></label>
+                <label class="choice-card"><input type="radio" name="budget" value="60"><div><strong>30–60 тыс. ₽</strong><span>Стандартный запуск</span></div></label>
+                <label class="choice-card"><input type="radio" name="budget" value="120"><div><strong>60–120 тыс. ₽</strong><span>Сайт или бренд</span></div></label>
+                <label class="choice-card"><input type="radio" name="budget" value="200"><div><strong>120–200 тыс. ₽</strong><span>Комплексный проект</span></div></label>
+                <label class="choice-card"><input type="radio" name="budget" value="200+"><div><strong>200 тыс. ₽ +</strong><span>Большой объём</span></div></label>
+              </div>
+              <div class="field" style="margin-top:14px"><label for="deadline">Когда нужно</label>
+                <select id="deadline" name="deadline">
+                  <option>Как можно скорее</option>
+                  <option>В течение 2 недель</option>
+                  <option>В течение месяца</option>
+                  <option>Более месяца</option>
+                  <option>Пока просто изучаю</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="step-panel" data-step="4">
+              <h2>Как с вами связаться?</h2>
+              <p>Покажем 3–5 исполнителей и поможем с выбором. Без спама и звонков «просто узнать».</p>
+              <div class="form-grid" style="margin-top:16px">
+                <div class="field"><label for="clientName">Имя</label><input id="clientName" name="clientName" autocomplete="name" placeholder="Алексей"></div>
+                <div class="field"><label for="company">Компания</label><input id="company" name="company" autocomplete="organization" placeholder="Необязательно"></div>
+                <div class="field"><label for="phone">Телефон</label><input id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="+7 999 000-00-00"></div>
+                <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.ru"></div>
+              </div>
+            </div>
+
+            <div class="step-panel" data-step="5">
+              <h2>Проверьте заявку</h2>
+              <p>Всё можно изменить — вернитесь на любой шаг.</p>
+              <div class="summary-list" id="briefSummary"></div>
+              <label class="consent"><input type="checkbox" id="briefConsent"> <span>Согласен с <a href="legal.html">офертой</a> и обработкой персональных данных. Данные демо-проекта хранятся только в браузере.</span></label>
+            </div>
+
+            <div class="form-error" id="briefError"></div>
+            <div class="wizard-nav">
+              <button class="btn btn-ghost" type="button" data-back>Назад</button>
+              <button class="btn btn-primary" type="button" data-next>Далее <span data-icon="arrow"></span></button>
+              <button class="btn btn-primary" type="submit" id="briefSubmit" style="display:none">Отправить заявку <span data-icon="send"></span></button>
+            </div>
+          </form>
+        </div>
+
+        <aside>
+          <div class="aside-card">
+            <h3>Что будет дальше</h3>
+            <p>Заявка попадает менеджеру, а не в общую ленту. Мы уточняем детали и присылаем подборку.</p>
+            <ul>
+              <li><span data-icon="check"></span><span>Проверим бриф и бюджет</span></li>
+              <li><span data-icon="check"></span><span>Подберём 3–5 исполнителей с кейсами</span></li>
+              <li><span data-icon="check"></span><span>Поможем сравнить сроки и стоимость</span></li>
+              <li><span data-icon="check"></span><span>Оплата — только после выбора</span></li>
+            </ul>
+            <div class="aside-cta">
+              <strong>Не хотите заполнять?</strong>
+              <p>Выберите готовый пакет в каталоге — там уже есть цена, срок и состав.</p>
+              <a href="catalog.html">Перейти в каталог <span data-icon="arrow"></span></a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>дело</span></a>
+          <p>Маркетплейс бизнес-услуг с гарантией результата. Демо-проект: показывает продуктовую модель, а не реальные платежи.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <a href="catalog.html?cat=web">Сайты</a>
+          <a href="catalog.html?cat=design">Дизайн</a>
+          <a href="catalog.html?cat=text">Тексты</a>
+          <a href="catalog.html?cat=seo">SEO</a>
+        </div>
+        <div class="footer-col">
+          <h4>Платформа</h4>
+          <a href="brief.html">Оставить заявку</a>
+          <a href="dashboard.html">Личный кабинет</a>
+          <a href="contractor.html">Исполнителям</a>
+          <a href="index.html#guarantee">Гарантия</a>
+        </div>
+        <div class="footer-col">
+          <h4>Документы</h4>
+          <a href="legal.html">Оферта и правила</a>
+          <a href="legal.html#privacy">Персональные данные</a>
+          <a href="legal.html#disputes">Споры</a>
+          <a href="legal.html#contacts">Контакты</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 «Дело». Демонстрационный проект.</span>
+        <span>Не является реальной платформой. Оплата имитируется.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

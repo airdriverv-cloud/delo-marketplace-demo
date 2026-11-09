@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Личный кабинет — дело</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="dashboard">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="дело — на главную"><img src="assets/logo.svg" alt=""><span>дело</span></a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="catalog.html" data-nav="catalog">Услуги</a>
+        <a href="index.html#how">Как это работает</a>
+        <a href="contractor.html" data-nav="contractor">Исполнителям</a>
+        <a href="index.html#guarantee">Гарантия</a>
+      </nav>
+      <div class="header-actions">
+        <a class="login" href="dashboard.html">Войти</a>
+        <a class="btn btn-primary btn-sm" href="brief.html">Заказать</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Меню" aria-expanded="false" data-icon="menu"></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация">
+      <a href="catalog.html">Услуги</a>
+      <a href="index.html#how">Как это работает</a>
+      <a href="contractor.html">Исполнителям</a>
+      <a href="index.html#guarantee">Гарантия</a>
+      <a href="dashboard.html">Личный кабинет</a>
+      <a class="btn btn-primary btn-block" href="brief.html">Заказать услугу</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="container" style="padding-top:30px;padding-bottom:60px">
+      <div class="dash-head">
+        <div>
+          <div class="eyebrow">Личный кабинет</div>
+          <h1>Ваши заказы</h1>
+          <p style="margin-top:6px">Демо-режим: заказы и статусы хранятся в браузере. Можно принимать работу и смотреть escrow.</p>
+        </div>
+        <div class="dash-user">
+          <span class="avatar orange">АК</span>
+          <div><strong>Алексей К.</strong><span>Клиент · демо</span></div>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card"><span>Активные заказы</span><strong id="statActive">0</strong><small>в работе и на проверке</small></div>
+        <div class="stat-card"><span>В escrow</span><strong id="statEscrow">0 ₽</strong><small>удерживается до приёмки</small></div>
+        <div class="stat-card"><span>Завершено</span><strong id="statDone">0</strong><small>оплата ушла исполнителю</small></div>
+        <div class="stat-card"><span>Всего заказов</span><strong id="statTotal">0</strong><small>за всё время</small></div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+        <h2 style="font-size:1.25rem">История</h2>
+        <a class="btn btn-light btn-sm" href="catalog.html"><span data-icon="plus"></span> Новый заказ</a>
+      </div>
+      <div class="orders" id="ordersRoot"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>дело</span></a>
+          <p>Маркетплейс бизнес-услуг с гарантией результата. Демо-проект: показывает продуктовую модель, а не реальные платежи.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <a href="catalog.html?cat=web">Сайты</a>
+          <a href="catalog.html?cat=design">Дизайн</a>
+          <a href="catalog.html?cat=text">Тексты</a>
+          <a href="catalog.html?cat=seo">SEO</a>
+        </div>
+        <div class="footer-col">
+          <h4>Платформа</h4>
+          <a href="brief.html">Оставить заявку</a>
+          <a href="dashboard.html">Личный кабинет</a>
+          <a href="contractor.html">Исполнителям</a>
+          <a href="index.html#guarantee">Гарантия</a>
+        </div>
+        <div class="footer-col">
+          <h4>Документы</h4>
+          <a href="legal.html">Оферта и правила</a>
+          <a href="legal.html#privacy">Персональные данные</a>
+          <a href="legal.html#disputes">Споры</a>
+          <a href="legal.html#contacts">Контакты</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 «Дело». Демонстрационный проект.</span>
+        <span>Не является реальной платформой. Оплата имитируется.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
